@@ -1,4 +1,4 @@
-from lesson1_carrega_csv import carregar_acessos
+from carrega_csv import carregar_acessos
 from sklearn.naive_bayes import MultinomialNB
 
 X,Y = carregar_acessos()
