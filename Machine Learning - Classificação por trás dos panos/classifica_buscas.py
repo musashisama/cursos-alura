@@ -52,3 +52,15 @@ print('Modelo Carregado:')
 print(taxa_de_acerto)
 print(total_de_acertos)
 print(total_de_elementos)
+
+#Testa a qualidade do modelo com algoritmo burro
+
+acerto_de_um = sum(Y)
+acerto_de_um = len(Y[Y==1])
+acerto_de_zero = len(Y) - acerto_de_um
+acerto_de_zero = len(Y[Y==0])
+taxa_de_acerto_base = 100.0 * max(acerto_de_um,acerto_de_zero)/len(Y)
+print("Taxa de acerto base: %f"% taxa_de_acerto_base)
+print("Taxa de acerto do modelo: %f"% taxa_de_acerto)
+#832. Se apenas chutássemos que Y seria 1 para todas as vezes, acertaríamos 83,2% das vezes. Melhor que o modelo calculado e menos complexo.
+
