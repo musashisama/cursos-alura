@@ -3,6 +3,8 @@ from sklearn.naive_bayes import MultinomialNB
 
 X,Y = carregar_acessos()
 
+# Separar 90% para treino e 10% para teste. Resultado 88.89% de acerto.
+
 treino_dados = X[:90]
 treino_marcacoes = Y[:90]
 
