@@ -7,14 +7,14 @@ from pathlib import Path
 
 pathStatic = Path('D:/Git/cursos/Machine Learning - Classificação por tras dos panos/static')
 print(pathStatic)
-df = pd.read_csv(pathStatic/'busca.csv')
+df = pd.read_csv(pathStatic/'busca4.csv')
 
 def fit_and_predict(nome, modelo, treino_dados,treino_marcacoes, teste_dados, teste_marcacoes):
     modelo.fit(treino_dados,treino_marcacoes)
     
     resultado = modelo.predict(teste_dados)
-    acertos = (resultado == teste_marcacoes)
-    
+    acertos = (resultado == teste_marcacoes)     
+
     total_de_acertos = sum(acertos)
     total_de_elementos = len(teste_dados)
     taxa_de_acerto = 100.0 * total_de_acertos / total_de_elementos
@@ -62,10 +62,14 @@ else:
     vencedor = modeloAdaBoost
 
 resultado = vencedor.predict(validacao_dados)
-acertos = (resultado == teste_marcacoes)    
+acertos = resultado == validacao_marcacoes 
 total_de_acertos = sum(acertos)
 total_de_elementos = len(validacao_marcacoes)
 taxa_de_acerto = 100.0 * total_de_acertos / total_de_elementos
-
+acerto_base = max(Counter(validacao_marcacoes).values())
+taxa_de_acerto_base = 100.0 * acerto_base / len(validacao_marcacoes)
+print("Taxa de acerto base: %f" % taxa_de_acerto_base)
+total_de_elementos = len(validacao_dados)
+print("Total de validação: %d" % total_de_elementos)
 msg = "Taxa de acerto do vencedor entre os dois algoritmos no mundo real (validação): {0}".format(taxa_de_acerto)
 print(msg)
