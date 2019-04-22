@@ -1,3 +1,9 @@
 alura/
 .vscode/
 Cursos_Alura.code-workspace
+.idea/misc.xml
+.idea/cursos.iml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/workspace.xml
+.idea/libraries/R_User_Library.xml
