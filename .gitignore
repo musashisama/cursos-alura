@@ -1,4 +1,10 @@
-﻿alura/
+alura/
 .vscode/
-Machine Learning - Classificação por trás dos panos/__pycache__/
-cursosAlura.code-workspace
+Cursos_Alura.code-workspace
+.idea/misc.xml
+.idea/cursos.iml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/workspace.xml
+.idea/libraries/R_User_Library.xml
+
