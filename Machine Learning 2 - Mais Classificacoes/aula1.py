@@ -4,7 +4,7 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn.ensemble import AdaBoostClassifier
 from collections import Counter
 
-pathStatic = Path('D:\Git\cursos\Machine Learning 2 - Mais Classificacoes\static')
+pathStatic = Path('O:\Projetos Python\Cursos Alura\Machine Learning 2 - Mais Classificacoes\static')
 
 df = pd.read_csv(pathStatic/'situacao_do_cliente.csv')
 
